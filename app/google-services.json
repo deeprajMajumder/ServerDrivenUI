@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "605804430013",
+    "project_id": "serverdrivenui-20a86",
+    "storage_bucket": "serverdrivenui-20a86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605804430013:android:ff99e6d30ba93c384eedd4",
+        "android_client_info": {
+          "package_name": "com.deepraj.serverdrivenui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9RetK2TyKSvM28oZnyP33aaKgGlDvfDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
