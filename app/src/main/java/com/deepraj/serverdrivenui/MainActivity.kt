@@ -32,6 +32,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -60,10 +62,10 @@ class MainActivity : ComponentActivity() {
 }
 @Composable
 fun MainComposable(viewModel : MainActivityViewModel) {
-    val layoutInformation by viewModel.layoutInformationFlow.collectAsStateWithLifeCycle()
+    val layoutInformation by viewModel.layoutInformationFlow.collectAsState()
     when(layoutInformation){
         null -> LoadingComponent()
-        else -> NewsFeedScreen(layoutInformation)
+        else -> NewsFeedScreen(layoutInformation!!)
     }
 }
 @Composable
@@ -114,7 +116,7 @@ fun NewItemComponent(newsItem : NewsItems, favoriteEnabled : Boolean){
                 Icon(imageVector = icon,
                     contentDescription = "Favourite",
                     modifier = Modifier.clickable {
-                        Log.d("FAVORITE", "Handle onClick for ${newsItem.id}")
+                        Log.d("Favourite", "Handle onClick for ${newsItem.id}")
                     })
             }
         }
